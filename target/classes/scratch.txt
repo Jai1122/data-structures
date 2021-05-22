@@ -1,0 +1,9 @@
+https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/
+
+
+* The depth of a node is the number of edges present in path from the root node of a tree to that node. Root is at depth 0. Related to level.
+* The height of a node is the number of edges present in the longest path connecting that node to a leaf node. Leaf is at height 0
+* Depth of root == Height of leaf
+* The diameter (or width) of a tree is the number of nodes on the longest path between any two leaf nodes.
+* To construct BST from preorder array, iterate through the array and create nodes.
+
