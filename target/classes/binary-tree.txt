@@ -53,3 +53,8 @@ Types of Binary Tree
         c)  Postorder and Level-order.
         d)  Preorder, Post order and Level order
 15) The reverse of the Preorder traversal of mirror tree will be the Postorder traversal of original tree
+16) Height == max depth of tree
+17) The diameter of a tree T is the largest of the following quantities:
+        the diameter of T’s left subtree.
+        the diameter of T’s right subtree.
+        the longest path between leaves that goes through the root of T (this can be computed from the heights of the subtrees of T)
