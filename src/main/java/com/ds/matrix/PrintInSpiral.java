@@ -11,42 +11,71 @@ public class PrintInSpiral {
         }
     }
 
+    private static void printSpiralInReverse(int[][] mat){
+        int rowStart = 0;
+        int rowEnd = mat.length-1;
+        int colStart = 0;
+        int colEnd = mat.length-1;
+
+        while(rowStart < rowEnd && colStart < colEnd){
+
+            //Print first column
+            for (int i = rowStart; i <= rowEnd; i++) {
+                System.out.print(mat[i][colStart]+", ");
+            }
+            colStart++;
+
+            //Print last row
+            for (int i = colStart; i <= colEnd; i++) {
+                System.out.print(mat[rowEnd][i]+", ");
+            }
+            rowEnd--;
+
+            //Print last column
+            for (int i = rowEnd; i >= rowStart ; i--) {
+                System.out.print(mat[i][colEnd]+", ");
+            }
+            colEnd--;
+
+            //Print first row
+            for (int i = colEnd; i >= colStart ; i--) {
+                System.out.print(mat[rowStart][i]+", ");
+            }
+            rowStart++;
+        }
+    }
+
     private static void printSpiral(int[][] mat){
-        int top = 0;
-        int bottom = mat.length-1;
-        int left = 0;
-        int right = mat[0].length-1;
+        int rowStart = 0;
+        int rowEnd = mat.length-1;
+        int colStart = 0;
+        int colEnd = mat.length-1;
 
-        while(true){
-            if(left > right)
-                break;
-            for (int i = left; i <= right; i++) {
-                System.out.print(mat[top][i]+" ");
+        while(rowStart < rowEnd && colStart < colEnd){
+
+            //Print First Row
+            for (int i = colStart; i <= colEnd; i++) {
+                System.out.print(mat[rowStart][i]+", ");
             }
-            top++;
-            if(top>bottom)
-                break;
+            rowStart++;
 
-            for (int i = top; i <= bottom; i++) {
-                System.out.print(mat[i][right]+" ");
+            //Print last column
+            for (int i = rowStart; i <= rowEnd; i++) {
+                System.out.print(mat[i][colEnd]+", ");
             }
-            right--;
+            colEnd--;
 
-            if(left > right)
-                break;
-
-            for (int i = right; i >= left; i--) {
-                System.out.print(mat[bottom][i]+" ");
+            //Print last row
+            for (int i = colEnd; i >= colStart ; i--) {
+                System.out.print(mat[rowEnd][i]+", ");
             }
-            bottom--;
+            rowEnd--;
 
-            if(top > bottom)
-                break;
-
-            for (int i = bottom; i >= top; i--) {
-                System.out.print(mat[i][left]+" ");
+            //Print first column
+            for (int i = rowEnd; i >= rowStart ; i--) {
+                System.out.print(mat[i][colStart]+", ");
             }
-            left++;
+            colStart++;
         }
     }
 
@@ -57,6 +86,8 @@ public class PrintInSpiral {
                 { 13, 14, 15, 16 } };
         printMatrix(mat);
         System.out.println();
-        printSpiral(mat);
+        //printSpiral(mat);
+        System.out.println("Spriral in Reverse");
+        printSpiralInReverse(mat);
     }
 }
