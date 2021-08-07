@@ -1,0 +1,7 @@
+if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z')
+                index = str.charAt(i) - 'A';
+
+        // If lowercase character, subtract 'a'
+        // to find index.
+        else if ('a' <= str.charAt(i) && str.charAt(i) <= 'z')
+              index = str.charAt(i) - 'a';
