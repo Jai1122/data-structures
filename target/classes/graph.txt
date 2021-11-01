@@ -1,0 +1,7 @@
+1) Detecting cycle in a graph
+A graph has cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges
+2) A mother vertex in a graph G = (V,E) is a vertex v such that all other vertices in G can be reached by a path from v.
+3) A directed graph is strongly connected if there is a path between all pairs of vertices.
+    A strongly connected component (SCC) of a directed graph is a maximal strongly connected subgraph
+    We can find all strongly connected components in O(V+E) time using Kosaraju’s algorithm
+4) The reach-ability matrix is called transitive closure of a graph
